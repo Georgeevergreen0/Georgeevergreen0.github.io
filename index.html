@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <title>Evergreen George Ekene</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content=" personal portfolio site">
+     <meta name="keywords" content="web Developer, Nodejs Developer, React Developer">
+     <meta name="author" content=" Evergreen George Ekene">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+     <script type="text/javascript" src="./js/scrollreveal.min.js"></script>
+     <script>
+          ScrollReveal({
+               delay: 500,
+               duration: 1000,
+               opacity: 0,
+               origin: "left",
+               distance: "120%",
+               reset: false,
+               ease: "ease-in",
+               interval: 1000,
+               viewFactor: 0.1,
+          })
+     </script>
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/custom.css">
+     <link rel="shortcut icon" href="./pictures/evergreen-icon.png" type="image/x-icon">
+
+</head>
+
+<body id="home">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!--Navigation -->
+     <!-- Overlay Container-->
+     <div id="myNav" class="overlay-nav">
+          <span href="#" class="closebtn" onclick="closeNav()"> &times;</span>
+          <div class="overlay-content">
+               <a href="#services" onclick="closeNav()">SERVICES</a>
+               <a href="#about" onclick="closeNav()">ABOUT</a>
+               <a href="#skills" onclick="closeNav()">SKILLS</a>
+               <a href="#portfolio" onclick="closeNav()">PORTFOLIO</a>
+               <!-- <a href="#reviews" onclick="closeNav()">REVIEWS</a> -->
+               <a href="#contact" onclick="closeNav()">CONTACT</a>
+          </div>
+     </div>
+
+     <div class="back-drop" onclick="closeNav()"></div>
+
+     <div class="costume-navbar">
+          <a href="#home" class="brand-name">Evergreen</a>
+          <div class="logo"><i class="fas fa-laugh"></i> Logo</div>
+          <div class="costume-navbar-content">
+               <input type="search" placeholder=" Search">
+               <a href="#services"><i class="fas fa-podcast"></i> Services</a>
+               <a href="#about"><i class="fas fa-male"></i> About</a>
+               <a href="#skills"><i class="fas fa-users"></i> Skills</a>
+               <a href="#portfolio"><i class="fas fa-award"></i> Portfolio</a>
+               <!-- <a href="#reviews"><i class="fas fa-award"></i> Reviews</a> -->
+               <a href="#contact"><i class="fas fa-address-book"></i> Contact</a>
+          </div>
+          <div id="open-tab" onclick="openNav()">&#9776;</div>
+     </div>
+
+
+
+     <!-- TOP -->
+     <section id="top">
+          <div class="owl-carousel owl-theme home-slider">
+               <div class="item item-first">
+                    <div class="caption">
+                         <h1>MERN <br> STACK <br> DEVELOPER</h1>
+                         <div>
+                              <a href="#contact" class="section-btn btn btn-default smoothScroll">Get In
+                                   Touch</a>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="item item-second">
+                    <div class="caption">
+                         <h1>AWS<br> CERTIFIED<br> CLOUD<br> PRACTITIONER</h1>
+                         <div>
+                              <a href="#portfolio" class="section-btn btn btn-default smoothScroll">View
+                                   Previous Works</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+
+     <!-- FEATURE -->
+     <div id="services">
+          <section id="feature">
+               <h2 style="text-align:center">Services</h2>
+               <div class="container">
+                    <div class="row">
+
+                         <div class="col-md-4 col-sm-4">
+                              <div class="feature-thumb">
+                                   <span>01</span>
+                                   <h3>Web Design</h3>
+                                   <p>Simple light-weight web design mockups, illustration etc
+                                        that is user-friendly, mobile-optimised, easy to use, responsive, printer and
+                                        screen friendly. That will convert your visitor into costumer.
+                                   </p>
+                              </div>
+                         </div>
+
+                         <div class="col-md-4 col-sm-4">
+                              <div class="feature-thumb">
+                                   <span>02</span>
+                                   <h3>Web Development</h3>
+                                   <p>Web application and business software powered by JavaScript, Nodejs,
+                                        React, Express, MongoDB, AWS Dynamodb, Serverless back-end,
+                                        AWS EC2 etc and other frameworks that is highly secure and scalable.
+                                   </p>
+                              </div>
+                         </div>
+
+                         <div class="col-md-4 col-sm-4">
+                              <div class="feature-thumb">
+                                   <span>03</span>
+                                   <h3>Other Services</h3>
+                                   <p>Hoisting, testing website for vunrabilities, ensure SEO requirement are meet.
+                                        Social-media and payment gateway integration, database back-up, Google map,
+                                        email-newsletter,
+                                        Membership system etc.
+                                   </p>
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+          </section>
+     </div>
+
+     <!-- paralex effect -->
+     <div class="paralex-effect-1"></div>
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <h2>About Me</h2>
+               <div class="col-md-6 col-sm-12">
+                    <div class="container-cube">
+                         <div class="cube">
+                              <div class="cube-top"> </div>
+                              <div class="cube-bottom"></div>
+                              <div class="cube-left"></div>
+                              <div class="cube-right"></div>
+                              <div class="cube-front"></div>
+                              <div class="cube-back"></div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                         <p> Hi, am George. I am web developer with 2+ year’s hands on experience in
+                              front-end and back-end web application development, proficient with various web
+                              development frameworks and library. Am a passionate and enthusiastic individual with
+                              excellent relationship building and communication skills, I love to design and create
+                              things.
+                              I am comfortable developing on front-end
+                              or back-end. I primary use Nodejs and specialize in MERN stack (MongoDB, Express, React
+                              and Nodejs) but picking up a new framework is not a problem. I have vast knowledge of
+                              HTML5, CSS3, JavaScript (ES5 and beyond) and various modern frameworks and libraries such
+                              as Bootstrap, React, Gatsby etc. I also have experience developing and deploying to cloud.
+                              Open to full-time or remote role.
+
+                         </p>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- paralex effect -->
+     <div class="paralex-effect-2"></div>
+
+     <!-- Skills -->
+     <div id="skills">
+          <section id="team">
+               <div class="container">
+                    <div class="section-title">
+                         <h2>Skills <small>I Have Experience in Following</small></h2>
+                    </div>
+                    <div class="skill-flex">
+                         <div>
+                              <img src="./pictures/web-design.jpg" class="img-responsive" alt="">
+                              <div class="team-info">
+                                   <h3>FRONT-END</h3>
+                                   <ul>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>JQuery</li>
+                                        <li>Bootstrap</li>
+                                        <li>Semantic-UI</li>
+                                        <li>Material-UI</li>
+                                        <li>React <i class="fab fa-react"></i></li>
+                                        <li>NextJs </li>
+                                        <li>Gatsby </li>
+                                        <li>Redux, React-Redux</li>
+                                        <li>React-Router</li>
+                                        <li>Axios and Fetch</li>
+                                        <li>DOM manipulation</li>
+                                        <li>JavaScript ES5 and beyound</li>
+                                   </ul>
+                              </div>
+                         </div>
+
+                         <div>
+                              <img src="./pictures/javascript.jpg" class="img-responsive" alt="">
+                              <div class="team-info">
+                                   <h3>BACK-END</h3>
+                                   <ul>
+                                        <li>NodeJs <i class="fab fa-node"></i></li>
+                                        <li>ExpressJS</li>
+                                        <li>MongoDB</li>
+                                        <li>PM2 and Forever</li>
+                                        <li>Nginx</li>
+                                        <li>Debugging</li>
+                                        <li>MySQL</li>
+                                        <li>HelmetJS</li>
+                                        <li>PassportJS</li>
+                                        <li>ORM-Sequelize</li>
+                                        <li>ODM-Mongoose</li>
+                                        <li>Code best practices</li>
+                                        <li>Template Engine (EJS)</li>
+                                   </ul>
+                              </div>
+                         </div>
+
+
+                         <div>
+                              <img src="./pictures/creative.jpg" class="img-responsive" alt="">
+                              <div class="team-info">
+                                   <h3>MICRO-SERVICES</h3>
+                                   <ul>
+                                        <li>SEO</li>
+                                        <li>Babel</li>
+                                        <li>Optimizing Images</li>
+                                        <li>Build tool (Webpack)</li>
+                                        <li>GraphQL and REST API</li>
+                                        <li>TypeScript and Flow</li>
+                                        <li>CSS preprocessor (SASS)</li>
+                                        <li>AWS, Google-Cloud, Firebase etc</li>
+                                        <li>Version Control (Git and Github/AWS CodeCommit)</li>
+                                        <li>Task-runner (NPM-script, Gulp, Grunt)</li>
+                                        <li>JavaScript testing (Moncha, Chai and Jest)</li>
+                                        <li>Authentication with session, JSON web token and 0Auth</li>
+                                   </ul>
+                              </div>
+                         </div>
+
+                         <div>
+                              <img src="./pictures/coding.jpg" class="img-responsive" alt="">
+                              <div class="team-info">
+                                   <h3>SOFT SKILLS</h3>
+                                   <ul>
+                                        <li>Team Work</li>
+                                        <li>Social skills</li>
+                                        <li>People skills</li>
+                                        <li>Listening Skills</li>
+                                        <li>System thinking</li>
+                                        <li>Speaking skills</li>
+                                        <li>writting skills</li>
+                                        <li>Communication skills</li>
+                                        <li>Problem Solving Skills</li>
+                                        <li>Always ready to learn new things</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+     </div>
+     </section>
+     </div>
+
+     <!-- paralex effect -->
+     <div class="paralex-effect-1"></div>
+
+     <!-- Portfolio-->
+     <div id="portfolio">
+          <section id="courses">
+               <div class="container">
+                    <div class="row">
+
+                         <div class="col-md-12 col-sm-12">
+                              <div class="section-title">
+                                   <h2>Portfolio <small>My recent works</small></h2>
+                              </div>
+
+                              <div class="owl-carousel owl-theme owl-courses">
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="courses-thumb">
+                                                  <div class="courses-top">
+                                                       <div class="courses-image">
+                                                            <img src="pictures/portfolio-burger.png"
+                                                                 class="img-responsive" alt="">
+                                                       </div>
+                                                  </div>
+
+                                                  <div class="courses-detail">
+                                                       <h3><a href="#">Burger Application</a></h3>
+                                                       <p>React and Serverless back-end</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="courses-thumb">
+                                                  <div class="courses-top">
+                                                       <div class="courses-image">
+                                                            <img src="pictures/portfolio-evergreen.PNG"
+                                                                 class="img-responsive" alt="portfolio">
+                                                       </div>
+                                                  </div>
+
+                                                  <div class="courses-detail">
+                                                       <h3><a href="#">Portfolio Website</a></h3>
+                                                       <p>Serverless contact me form</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="courses-thumb">
+                                                  <div class="courses-top">
+                                                       <div class="courses-image">
+                                                            <img src="pictures/portfolio-gym.PNG" class="img-responsive"
+                                                                 alt="">
+                                                       </div>
+                                                  </div>
+
+                                                  <div class="courses-detail">
+                                                       <h3><a href="#">Blogging</a></h3>
+                                                       <p>Content Management system with NodeJS.</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="courses-thumb">
+                                                  <div class="courses-top">
+                                                       <div class="courses-image">
+                                                            <img src="pictures/portfolio-school.PNG"
+                                                                 class="img-responsive" alt="">
+                                                       </div>
+
+                                                  </div>
+
+                                                  <div class="courses-detail">
+                                                       <h3><a href="#">Education web App</a></h3>
+                                                       <p>Payment gateway and video streaming.</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+
+                         </div>
+                    </div>
+          </section>
+     </div>
+
+     <!-- paralex effect -->
+     <div class="paralex-effect-2"></div>
+
+     <!-- Reviews
+     <div id="reviews">
+          <section id="testimonial">
+               <div class="container">
+                    <div class="row">
+
+                         <div class="col-md-12 col-sm-12">
+                              <div class="section-title">
+                                   <h2>Clients <small>Testimonial and reviews</small></h2>
+                              </div>
+
+                              <div class="owl-carousel owl-theme owl-client">
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="tst-image">
+                                                  <img src="images/tst-image1.jpg" class="img-responsive" alt="">
+                                             </div>
+                                             <div class="tst-author">
+                                                  <h4>Okwy</h4>
+                                                  <span>Nigeria</span>
+                                             </div>
+                                             <p>You really do help young creative minds to get quality education and
+                                                  professional job search assistance. I’d recommend it to everyone!</p>
+                                             <div class="tst-rating">
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="tst-image">
+                                                  <img src="images/tst-image2.jpg" class="img-responsive" alt="">
+                                             </div>
+                                             <div class="tst-author">
+                                                  <h4>Prosper</h4>
+                                                  <span>Russia</span>
+                                             </div>
+                                             <p>Trying something new is exciting! Thanks for the amazing law course and
+                                                  the
+                                                  great teacher who was able to make it interesting.</p>
+                                             <div class="tst-rating">
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-md-4 col-sm-4">
+                                        <div class="item">
+                                             <div class="tst-image">
+                                                  <img src="images/tst-image3.jpg" class="img-responsive" alt="">
+                                             </div>
+                                             <div class="tst-author">
+                                                  <h4>Willian</h4>
+                                                  <span>England</span>
+                                             </div>
+                                             <p>Working with him was the bes decision we made</p>
+                                             <div class="tst-rating">
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+
+                         </div>
+                    </div>
+          </section>
+     </div>-->
+
+     <!-- paralex effect
+     <div class="paralex-effect-1"></div>-->
+
+     <!-- CONTACT -->
+     <section id="contact">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                         <form id="contact-form" role="form" action="" method="post">
+                              <div class="section-title">
+                                   <h2>Contact us <small>Let us talk!</small></h2>
+                              </div>
+
+                              <div class="col-md-12 col-sm-12">
+                                   <input type="text" class="form-control" placeholder="Enter full name" name="name"
+                                        required="">
+
+                                   <input type="email" class="form-control" placeholder="Enter email address"
+                                        name="email" required="">
+
+                                   <textarea class="form-control" rows="6" placeholder="Your message" name="message"
+                                        required=""></textarea>
+                              </div>
+
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="send message" value="Send Message">
+                              </div>
+
+                         </form>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="contact-image">
+                              <img src="pictures/img-01.png" class="img-responsive" alt="Smiling Two Girls">
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- paralex effect -->
+     <div class="paralex-effect-1"></div>
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Hire Me</h2>
+                              </div>
+                              <p>Looking for a professional, communicative and puntual software engineer with
+                                   extensive web development skills to add to your team ?
+                                   If you have application you are interested in developing, a problem that needs
+                                   solving or project that needs rescuing, I would love to help you with it. Open
+                                   to full-time and remote role.
+                              </p>
+
+
+                              <ul class="social-icon">
+                                   <li>
+                                        <a href="https://www.linkedin.com/in/georgeevergreen" target="_blank"
+                                             class="fab fa-linkedin" attr="facebook icon"></a>
+                                   </li>
+                                   <li>
+                                        <a href="https://twitter.com/georgeevergreen" target="_blank"
+                                             class="fab fa-twitter"></a>
+                                   </li>
+                                   <li>
+                                        <a href="https://instagram.com/georgeevergreen" target="_blank"
+                                             class="fab fa-instagram"></a>
+                                   </li>
+                                   <li>
+                                        <a href="https://github.com/georgeevergreen0" target="_blank"
+                                             class="fab fa-github"></a>
+                                   </li>
+                              </ul>
+
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2019</p>
+
+                                   <p>Designed By Evergreen George Ekene</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+234 8161 272805, +234 7011 810004</p>
+                                   <p><a href="mailto:georgeevergreen0@.gmail.com">georgeevergreen0@gmail.com</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#contact">Contact</a></li>
+                                        <li><a href="#services">Services</a></li>
+                                        <li><a href="#portfolio">Portfolio</a></li>
+                                        <li><a href="#skills">Skills</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Newsletter Signup</h2>
+                              </div>
+                              <div>
+                                   <div class="form-group">
+                                        <form action="#" method="get">
+                                             <input type="email" class="form-control" placeholder="Enter your email"
+                                                  name="email" id="email" required="">
+                                             <input type="submit" class="form-control" name="submit" id="form-submit"
+                                                  value="Send">
+                                        </form>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+
+</html>
