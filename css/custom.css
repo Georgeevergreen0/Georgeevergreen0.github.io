@@ -515,25 +515,6 @@ section#top {
 }
 
 /*---------------------------------------
-     paralex-effect
-  -----------------------------------------*/
-.paralex-effect-1 {
-  width: 100%;
-  height: 80vh;
-  background-image: url(../pictures/evergreen-1.jpg);
-  background-position: top;
-  background-attachment: fixed;
-}
-
-.paralex-effect-2 {
-  width: 100%;
-  height: 80vh;
-  background-image: url(../pictures/evergreen-2.jpg);
-  background-position: top;
-  background-attachment: fixed;
-}
-
-/*---------------------------------------
      SERVICES
   -----------------------------------------*/
 .feature-thumb {
