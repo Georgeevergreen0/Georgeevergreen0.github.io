@@ -5,11 +5,11 @@
      <title>Evergreen George Ekene</title>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content=" personal portfolio site">
-     <meta name="keywords" content="web Developer, Nodejs Developer, React Developer">
      <meta name="author" content=" Evergreen George Ekene">
+     <meta name="robots" content="index">
+     <meta name="description" content="Personal Portfolio Site">
+     <meta name="keywords" content="web Developer, Nodejs Developer, React Developer, Full-Stack Developer">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 
      <script type="text/javascript" src="./js/scrollreveal.min.js"></script>
      <script>
@@ -25,6 +25,7 @@
                viewFactor: 0,
           })
      </script>
+
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/owl.carousel.css">
@@ -48,21 +49,6 @@
 
 
      <!--Navigation -->
-     <!-- Overlay Container-->
-     <div id="myNav" class="overlay-nav">
-          <span href="#" class="closebtn" onclick="closeNav()"> &times;</span>
-          <div class="overlay-content">
-               <a href="#services" onclick="closeNav()">SERVICES</a>
-               <a href="#about" onclick="closeNav()">ABOUT</a>
-               <a href="#skills" onclick="closeNav()">SKILLS</a>
-               <a href="#portfolio" onclick="closeNav()">PORTFOLIO</a>
-               <!-- <a href="#reviews" onclick="closeNav()">REVIEWS</a> -->
-               <a href="#contact" onclick="closeNav()">CONTACT</a>
-          </div>
-     </div>
-
-     <div class="back-drop" onclick="closeNav()"></div>
-
      <div class="costume-navbar">
           <a href="#home" class="brand-name">Evergreen</a>
           <div class="logo"><i class="fas fa-laugh"></i></div>
@@ -72,11 +58,30 @@
                <a href="#about"><i class="fas fa-male"></i> About</a>
                <a href="#skills"><i class="fas fa-users"></i> Skills</a>
                <a href="#portfolio"><i class="fas fa-award"></i> Portfolio</a>
-               <!-- <a href="#reviews"><i class="fas fa-award"></i> Reviews</a> -->
+               <!-- <a href="#plans"><i class="fas fa-briefcase"></i> Pricing</a>-->
                <a href="#contact"><i class="fas fa-address-book"></i> Contact</a>
           </div>
           <div id="open-tab" onclick="openNav()">&#9776;</div>
      </div>
+
+
+     <!-- Overlay Container-->
+     <div id="myNav" class="overlay-nav">
+          <span class="closebtn" onclick="closeNav(event)"> &times;</span>
+          <div class="overlay-content">
+               <a href="#services" onclick="closeNav(event)">SERVICES</a>
+               <a href="#about" onclick="closeNav(event)">ABOUT</a>
+               <a href="#skills" onclick="closeNav(event)">SKILLS</a>
+               <a href="#portfolio" onclick="closeNav(event)">PORTFOLIO</a>
+               <!--<a href="#plans" onclick="closeNav(event)">PRICING</a>-->
+               <a href="#contact" onclick="closeNav(event)">CONTACT</a>
+          </div>
+     </div>
+     <!-- Overlay Container backdrop-->
+     <div class="back-drop" onclick="closeNav(event)"></div>
+
+
+
 
 
 
@@ -102,58 +107,65 @@
                          </div>
                     </div>
                </div>
+               <div class="item item-third">
+                    <div class="caption">
+                         <h1>I<br> AM<br> GEORGE<br> EVERGREEN</h1>
+                         <div>
+                              <a href="#footer" class="section-btn btn btn-default smoothScroll">
+                                   Find Me Online</a>
+                         </div>
+                    </div>
+               </div>
           </div>
      </section>
 
 
-     <!-- FEATURE -->
-     <div id="services">
-          <section id="feature">
-               <h2 style="text-align:center">Services</h2>
-               <div class="container">
-                    <div class="row">
+     <!-- services -->
+     <section id="services">
+          <h2 style="text-align:center">Services</h2>
+          <div class="container">
+               <div class="row">
 
-                         <div class="col-md-4 col-sm-4">
-                              <div class="feature-thumb">
-                                   <span>01</span>
-                                   <h3>Web Design</h3>
-                                   <p>Simple light-weight web design mockups, illustration etc
-                                        that is user-friendly, mobile-optimised, easy to use, responsive, printer and
-                                        screen friendly. That will convert your visitor into costumer.
-                                   </p>
-                              </div>
+                    <div class="col-md-4 col-sm-4">
+                         <div class="services-thumb">
+                              <span>01</span>
+                              <h3>Web Design</h3>
+                              <p>Simple light-weight web design mockups, illustration etc
+                                   that is user-friendly, mobile-optimised, easy to use, responsive,
+                                   printer and
+                                   screen friendly. That will convert your visitor into costumer.
+                              </p>
                          </div>
-
-                         <div class="col-md-4 col-sm-4">
-                              <div class="feature-thumb">
-                                   <span>02</span>
-                                   <h3>Web Development</h3>
-                                   <p>Web application and business software powered by JavaScript, Nodejs,
-                                        React, Express, MongoDB, AWS Dynamodb, Serverless back-end,
-                                        AWS EC2 etc and other frameworks that is highly secure and scalable.
-                                   </p>
-                              </div>
-                         </div>
-
-                         <div class="col-md-4 col-sm-4">
-                              <div class="feature-thumb">
-                                   <span>03</span>
-                                   <h3>Other Services</h3>
-                                   <p>Hoisting, testing website for vunrabilities, ensure SEO requirement are meet.
-                                        Social-media and payment gateway integration, database back-up, Google map,
-                                        email-newsletter,
-                                        Membership system etc.
-                                   </p>
-                              </div>
-                         </div>
-
                     </div>
-               </div>
-          </section>
-     </div>
 
-     <!-- paralex effect -->
-     <div class="paralex-effect-1"></div>
+                    <div class="col-md-4 col-sm-4">
+                         <div class="services-thumb">
+                              <span>02</span>
+                              <h3>Web Development</h3>
+                              <p>Web application and business software powered by JavaScript, Nodejs,
+                                   React, Express, MongoDB, AWS Dynamodb, Serverless back-end,
+                                   AWS EC2 etc and other frameworks that is highly secure and scalable.
+                              </p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="services-thumb">
+                              <span>03</span>
+                              <h3>Other Services</h3>
+                              <p>Hoisting, testing website for vunrabilities, ensure SEO requirement are
+                                   meet.
+                                   Social-media and payment gateway integration, database back-up, Google
+                                   map,
+                                   email-newsletter,
+                                   Membership system etc.
+                              </p>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
 
      <!-- ABOUT -->
      <section id="about">
@@ -175,14 +187,20 @@
                     <div class="col-md-6 col-sm-12">
                          <p> Hi, am George. I am web developer with 2+ year’s hands on experience in
                               front-end and back-end web application development, proficient with various web
-                              development frameworks and library. Am a passionate and enthusiastic individual with
-                              excellent relationship building and communication skills, I love to design and create
+                              development frameworks and library. Am a passionate and enthusiastic individual
+                              with
+                              excellent relationship building and communication skills, I love to design and
+                              create
                               things.
                               I am comfortable developing on front-end
-                              or back-end. I primary use Nodejs and specialize in MERN stack (MongoDB, Express, React
-                              and Nodejs) but picking up a new framework is not a problem. I have vast knowledge of
-                              HTML5, CSS3, JavaScript (ES5 and beyond) and various modern frameworks and libraries such
-                              as Bootstrap, React, Gatsby etc. I also have experience developing and deploying to cloud.
+                              or back-end. I primary use Nodejs and specialize in MERN stack (MongoDB,
+                              Express, React
+                              and Nodejs) but picking up a new framework is not a problem. I have vast
+                              knowledge of
+                              HTML5, CSS3, JavaScript (ES5 and beyond) and various modern frameworks and
+                              libraries such
+                              as Bootstrap, React, Gatsby etc. I also have experience developing and deploying
+                              to cloud.
                               Open to full-time or remote role.
 
                          </p>
@@ -193,308 +211,253 @@
      </section>
 
      <!-- Skills -->
-     <div id="skills">
-          <section id="team">
-               <div class="container">
-                    <div class="section-title">
-                         <h2>Skills <small>I Have Experience in Following</small></h2>
+     <section id="skills">
+          <div class="container">
+               <div class="section-title">
+                    <h2>Skills <small>I Have Experience in Following</small></h2>
+               </div>
+               <div class="skill-flex">
+                    <div>
+                         <img src="./pictures/web-design.jpg" class="img-responsive" alt="">
+                         <div class="skills-info">
+                              <h3>FRONT-END</h3>
+                              <ul>
+                                   <li>HTML5</li>
+                                   <li>CSS3</li>
+                                   <li>JQuery</li>
+                                   <li>Bootstrap</li>
+                                   <li>Semantic-UI</li>
+                                   <li>Material-UI</li>
+                                   <li>React <i class="fab fa-react"></i></li>
+                                   <li>NextJs </li>
+                                   <li>Gatsby </li>
+                                   <li>Redux, React-Redux</li>
+                                   <li>React-Router</li>
+                                   <li>Axios and Fetch</li>
+                                   <li>DOM manipulation</li>
+                                   <li>JavaScript ES5 and beyound</li>
+                              </ul>
+                         </div>
                     </div>
-                    <div class="skill-flex">
-                         <div>
-                              <img src="./pictures/web-design.jpg" class="img-responsive" alt="">
-                              <div class="team-info">
-                                   <h3>FRONT-END</h3>
-                                   <ul>
-                                        <li>HTML5</li>
-                                        <li>CSS3</li>
-                                        <li>JQuery</li>
-                                        <li>Bootstrap</li>
-                                        <li>Semantic-UI</li>
-                                        <li>Material-UI</li>
-                                        <li>React <i class="fab fa-react"></i></li>
-                                        <li>NextJs </li>
-                                        <li>Gatsby </li>
-                                        <li>Redux, React-Redux</li>
-                                        <li>React-Router</li>
-                                        <li>Axios and Fetch</li>
-                                        <li>DOM manipulation</li>
-                                        <li>JavaScript ES5 and beyound</li>
-                                   </ul>
-                              </div>
+
+                    <div>
+                         <img src="./pictures/javascript.jpg" class="img-responsive" alt="">
+                         <div class="skills-info">
+                              <h3>BACK-END</h3>
+                              <ul>
+                                   <li>NodeJs <i class="fab fa-node"></i></li>
+                                   <li>ExpressJS</li>
+                                   <li>MongoDB</li>
+                                   <li>PM2 and Forever</li>
+                                   <li>Nginx</li>
+                                   <li>Debugging</li>
+                                   <li>MySQL</li>
+                                   <li>HelmetJS</li>
+                                   <li>PassportJS</li>
+                                   <li>ORM-Sequelize</li>
+                                   <li>ODM-Mongoose</li>
+                                   <li>Code best practices</li>
+                                   <li>Template Engine (EJS)</li>
+                              </ul>
                          </div>
+                    </div>
 
-                         <div>
-                              <img src="./pictures/javascript.jpg" class="img-responsive" alt="">
-                              <div class="team-info">
-                                   <h3>BACK-END</h3>
-                                   <ul>
-                                        <li>NodeJs <i class="fab fa-node"></i></li>
-                                        <li>ExpressJS</li>
-                                        <li>MongoDB</li>
-                                        <li>PM2 and Forever</li>
-                                        <li>Nginx</li>
-                                        <li>Debugging</li>
-                                        <li>MySQL</li>
-                                        <li>HelmetJS</li>
-                                        <li>PassportJS</li>
-                                        <li>ORM-Sequelize</li>
-                                        <li>ODM-Mongoose</li>
-                                        <li>Code best practices</li>
-                                        <li>Template Engine (EJS)</li>
-                                   </ul>
-                              </div>
+
+                    <div>
+                         <img src="./pictures/creative.jpg" class="img-responsive" alt="">
+                         <div class="skills-info">
+                              <h3>MICRO-SERVICES</h3>
+                              <ul>
+                                   <li>SEO</li>
+                                   <li>Babel</li>
+                                   <li>Optimizing Images</li>
+                                   <li>Build tool (Webpack)</li>
+                                   <li>GraphQL and REST API</li>
+                                   <li>TypeScript and Flow</li>
+                                   <li>CSS preprocessor (SASS)</li>
+                                   <li>AWS, Google-Cloud, Firebase etc</li>
+                                   <li>Version Control (Git and Github/AWS CodeCommit)</li>
+                                   <li>Task-runner (NPM-script, Gulp, Grunt)</li>
+                                   <li>JavaScript testing (Moncha, Chai and Jest)</li>
+                                   <li>Authentication with session, JSON web token and 0Auth</li>
+                              </ul>
                          </div>
+                    </div>
 
-
-                         <div>
-                              <img src="./pictures/creative.jpg" class="img-responsive" alt="">
-                              <div class="team-info">
-                                   <h3>MICRO-SERVICES</h3>
-                                   <ul>
-                                        <li>SEO</li>
-                                        <li>Babel</li>
-                                        <li>Optimizing Images</li>
-                                        <li>Build tool (Webpack)</li>
-                                        <li>GraphQL and REST API</li>
-                                        <li>TypeScript and Flow</li>
-                                        <li>CSS preprocessor (SASS)</li>
-                                        <li>AWS, Google-Cloud, Firebase etc</li>
-                                        <li>Version Control (Git and Github/AWS CodeCommit)</li>
-                                        <li>Task-runner (NPM-script, Gulp, Grunt)</li>
-                                        <li>JavaScript testing (Moncha, Chai and Jest)</li>
-                                        <li>Authentication with session, JSON web token and 0Auth</li>
-                                   </ul>
-                              </div>
-                         </div>
-
-                         <div>
-                              <img src="./pictures/coding.jpg" class="img-responsive" alt="">
-                              <div class="team-info">
-                                   <h3>SOFT SKILLS</h3>
-                                   <ul>
-                                        <li>Team Work</li>
-                                        <li>Social skills</li>
-                                        <li>People skills</li>
-                                        <li>Listening Skills</li>
-                                        <li>System thinking</li>
-                                        <li>Speaking skills</li>
-                                        <li>writting skills</li>
-                                        <li>Communication skills</li>
-                                        <li>Problem Solving Skills</li>
-                                        <li>Always ready to learn new things</li>
-                                   </ul>
-                              </div>
+                    <div>
+                         <img src="./pictures/coding.jpg" class="img-responsive" alt="">
+                         <div class="skills-info">
+                              <h3>SOFT SKILLS</h3>
+                              <ul>
+                                   <li>Social skills</li>
+                                   <li>People skills</li>
+                                   <li>Listening Skills</li>
+                                   <li>System thinking</li>
+                                   <li>Speaking skills</li>
+                                   <li>writting skills</li>
+                                   <li>Communication skills</li>
+                                   <li>Problem Solving Skills</li>
+                                   <li>Always ready to learn new things</li>
+                              </ul>
                          </div>
                     </div>
                </div>
-     </div>
+          </div>
+          </div>
      </section>
-     </div>
+
 
      <!-- Portfolio-->
-     <div id="portfolio">
-          <section id="courses">
-               <div class="container">
-                    <div class="row">
+     <section id="portfolio">
+          <div class="container">
+               <div class="row">
 
-                         <div class="col-md-12 col-sm-12">
-                              <div class="section-title">
-                                   <h2>Portfolio <small>My recent works</small></h2>
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Portfolio <small>My recent works</small></h2>
+                         </div>
+
+                         <div class="owl-carousel owl-theme owl-portfolio">
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="portfolio-thumb">
+                                             <div class="portfolio-top">
+                                                  <div class="portfolio-image">
+                                                       <img src="pictures/portfolio-burger.png" class="img-responsive"
+                                                            alt="">
+                                                  </div>
+                                             </div>
+                                             <div class="portfolio-detail">
+                                                  <a href="#" target="_blank">Visit</a>
+                                                  <a href="#" target="_blank">View Source</a>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
 
-                              <div class="owl-carousel owl-theme owl-courses">
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="courses-thumb">
-                                                  <div class="courses-top">
-                                                       <div class="courses-image">
-                                                            <img src="pictures/portfolio-burger.png"
-                                                                 class="img-responsive" alt="">
-                                                       </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="portfolio-thumb">
+                                             <div class="portfolio-top">
+                                                  <div class="portfolio-image">
+                                                       <img src="pictures/portfolio-evergreen.png"
+                                                            class="img-responsive" alt="portfolio">
                                                   </div>
-
-                                                  <div class="courses-detail">
-                                                       <h3><a href="#">Burger Application</a></h3>
-                                                       <p>React and Serverless back-end</p>
-                                                  </div>
+                                             </div>
+                                             <div class="portfolio-detail">
+                                                  <a href="#" target="_blank">Visit</a>
+                                                  <a href="#" target="_blank">View Source</a>
                                              </div>
                                         </div>
                                    </div>
-
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="courses-thumb">
-                                                  <div class="courses-top">
-                                                       <div class="courses-image">
-                                                            <img src="pictures/portfolio-evergreen.png"
-                                                                 class="img-responsive" alt="portfolio">
-                                                       </div>
-                                                  </div>
-
-                                                  <div class="courses-detail">
-                                                       <h3><a href="#">Portfolio Website</a></h3>
-                                                       <p>Serverless contact me form</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="courses-thumb">
-                                                  <div class="courses-top">
-                                                       <div class="courses-image">
-                                                            <img src="pictures/portfolio-gym.png" class="img-responsive"
-                                                                 alt="">
-                                                       </div>
-                                                  </div>
-
-                                                  <div class="courses-detail">
-                                                       <h3><a href="#">Blogging</a></h3>
-                                                       <p>Content Management system with NodeJS.</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="courses-thumb">
-                                                  <div class="courses-top">
-                                                       <div class="courses-image">
-                                                            <img src="pictures/portfolio-school.png"
-                                                                 class="img-responsive" alt="">
-                                                       </div>
-
-                                                  </div>
-
-                                                  <div class="courses-detail">
-                                                       <h3><a href="#">Education web App</a></h3>
-                                                       <p>Payment gateway and video streaming.</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-
                               </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="portfolio-thumb">
+                                             <div class="portfolio-top">
+                                                  <div class="portfolio-image">
+                                                       <img src="pictures/portfolio-gym.png" class="img-responsive"
+                                                            alt="">
+                                                  </div>
+                                             </div>
+                                             <div class="portfolio-detail">
+                                                  <a href="#" target="_blank">Visit</a>
+                                                  <a href="#" target="_blank">View Source</a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="portfolio-thumb">
+                                             <div class="portfolio-top">
+                                                  <div class="portfolio-image">
+                                                       <img src="pictures/portfolio-school.png" class="img-responsive"
+                                                            alt="school Site">
+                                                  </div>
+                                             </div>
+                                             <div class="portfolio-detail">
+                                                  <a href="#" target="_blank">Visit</a>
+                                                  <a href="#" target="_blank">View Source</a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+
 
                          </div>
                     </div>
-          </section>
-     </div>
+               </div>
+     </section>
 
-     <!-- Reviews
-     <div id="reviews">
-          <section id="testimonial">
-               <div class="container">
-                    <div class="row">
+     <!-- Plans
+     <section id="plans">
 
-                         <div class="col-md-12 col-sm-12">
-                              <div class="section-title">
-                                   <h2>Clients <small>Testimonial and reviews</small></h2>
-                              </div>
-
-                              <div class="owl-carousel owl-theme owl-client">
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="tst-image">
-                                                  <img src="images/tst-image1.jpg" class="img-responsive" alt="">
-                                             </div>
-                                             <div class="tst-author">
-                                                  <h4>Okwy</h4>
-                                                  <span>Nigeria</span>
-                                             </div>
-                                             <p>You really do help young creative minds to get quality education and
-                                                  professional job search assistance. I’d recommend it to everyone!</p>
-                                             <div class="tst-rating">
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="tst-image">
-                                                  <img src="images/tst-image2.jpg" class="img-responsive" alt="">
-                                             </div>
-                                             <div class="tst-author">
-                                                  <h4>Prosper</h4>
-                                                  <span>Russia</span>
-                                             </div>
-                                             <p>Trying something new is exciting! Thanks for the amazing law course and
-                                                  the
-                                                  great teacher who was able to make it interesting.</p>
-                                             <div class="tst-rating">
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div class="col-md-4 col-sm-4">
-                                        <div class="item">
-                                             <div class="tst-image">
-                                                  <img src="images/tst-image3.jpg" class="img-responsive" alt="">
-                                             </div>
-                                             <div class="tst-author">
-                                                  <h4>Willian</h4>
-                                                  <span>England</span>
-                                             </div>
-                                             <p>Working with him was the bes decision we made</p>
-                                             <div class="tst-rating">
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                                  <i class="fa fa-star"></i>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                              </div>
-
-                         </div>
+          <div class="section-title">
+               <h2>Pricing <small>Basic and pro</small></h2>
+          </div>
+          <div>
+               <div>
+                    <h4>Basic</h4>
+                    <div></div>
+                    <div class="tst-rating">
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
                     </div>
-          </section>
-     </div>-->
+               </div>
+               <div>
+                    <h4>Pro</h4>
+                    <div></div>
+                    <div class="tst-rating">
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                         <i class="fa fa-star"></i>
+                    </div>
+               </div>
+          </div>
+     </section>-->
 
 
      <!-- CONTACT -->
      <section id="contact">
           <div class="container">
                <div class="row">
-
                     <div class="col-md-6 col-sm-12">
-                         <form id="contact-form" role="form" action="" method="post">
+                         <form id="contact-form" role="form" action="https://formspree.io/xgevdqwv" method="POST">
                               <div class="section-title">
                                    <h2>Contact <small>Lets talk!</small></h2>
                               </div>
 
                               <div class="col-md-12 col-sm-12">
                                    <input type="text" class="form-control" placeholder="Enter full name" name="name"
-                                        required="">
+                                        required>
 
                                    <input type="email" class="form-control" placeholder="Enter email address"
-                                        name="email" required="">
+                                        name="email" required>
 
                                    <textarea class="form-control" rows="6" placeholder="Your message" name="message"
-                                        required=""></textarea>
+                                        required></textarea>
                               </div>
 
                               <div class="col-md-4 col-sm-12">
-                                   <input type="submit" class="form-control" name="send message" value="Send Message">
+                                   <input id="submit-button" type="submit" class="form-control" value="Send Message">
+                                   <div id="my-form-status"></div>
                               </div>
-
                          </form>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
                          <div class="contact-image">
-                              <img src="pictures/img-01.png" class="img-responsive" alt="Smiling Two Girls">
+                              <img src="pictures/img-01.png" class="img-responsive" alt="Message box">
                          </div>
                     </div>
 
@@ -513,14 +476,16 @@
                               <div class="section-title">
                                    <h2>Hire Me</h2>
                               </div>
-                              <p>Looking for a professional, communicative and puntual software engineer with
-                                   extensive web development skills to add to your team ?
+                              <p>Looking for a professional, communicative and punctual software engineer with
+                                   extensive web development skills to add to your skills ?
                                    If you have application you are interested in developing, a problem that needs
                                    solving or project that needs rescuing, I would love to help you with it. Open
                                    to full-time and remote role.
                               </p>
 
-
+                              <div class="section-title social-icon-title">
+                                   <h2>Find Me Online</h2>
+                              </div>
                               <ul class="social-icon">
                                    <li>
                                         <a href="https://www.linkedin.com/in/georgeevergreen" target="_blank"
@@ -539,12 +504,6 @@
                                              class="fab fa-github"></a>
                                    </li>
                               </ul>
-
-                              <div class="copyright-text">
-                                   <p>Copyright &copy; 2019</p>
-
-                                   <p>Designed By Evergreen George Ekene</p>
-                              </div>
                          </div>
                     </div>
 
@@ -555,7 +514,7 @@
                               </div>
                               <address>
                                    <p>+234 8161 272805, +234 7011 810004</p>
-                                   <p><a href="mailto:georgeevergreen0@.gmail.com">georgeevergreen0@gmail.com</a></p>
+                                   <p><a href="mailto:admin@georgeevergreen.com">admin@georgeevergreen.com</a></p>
                               </address>
 
                               <div class="footer_menu">
@@ -564,6 +523,7 @@
                                         <li><a href="#contact">Contact</a></li>
                                         <li><a href="#services">Services</a></li>
                                         <li><a href="#portfolio">Portfolio</a></li>
+                                        <li><a href="#plans">Pricing</a></li>
                                         <li><a href="#skills">Skills</a></li>
                                    </ul>
                               </div>
@@ -571,19 +531,14 @@
                     </div>
 
                     <div class="col-md-4 col-sm-12">
-                         <div class="footer-info newsletter-form">
-                              <div class="section-title">
-                                   <h2>Newsletter Signup</h2>
+                         <div class="footer-info">
+                              <div class="section-title footer-icon">
+                                   <h2>Author</h2>
+                                   <img src="./pictures/evergreen.png" alt="image of evergreen">
                               </div>
-                              <div>
-                                   <div class="form-group">
-                                        <form action="#" method="get">
-                                             <input type="email" class="form-control" placeholder="Enter your email"
-                                                  name="email" id="email" required="">
-                                             <input type="submit" class="form-control" name="submit" id="form-submit"
-                                                  value="Send">
-                                        </form>
-                                   </div>
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2020</p>
+                                   <p>Designed By Evergreen George Ekene</p>
                               </div>
                          </div>
                     </div>

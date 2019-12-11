@@ -7,22 +7,22 @@
     $('.preloader').fadeOut(1000); // set duration in brackets
   });
 
-  // HOME SLIDER & COURSES & CLIENTS
+  // SLIDER
   $('.home-slider').owlCarousel({
     animateOut: 'fadeOut',
     items: 1,
     loop: true,
     dots: false,
     autoplay: true,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 3000,
     autoplayHoverPause: false,
     smartSpeed: 1000,
   })
 
-  $('.owl-courses').owlCarousel({
+  $('.owl-portfolio').owlCarousel({
     animateOut: 'fadeOut',
     loop: true,
-    autoplayHoverPause: false,
+    autoplayHoverPause: true,
     autoplay: true,
     autoplayTimeout: 2000,
     smartSpeed: 1000,
@@ -43,23 +43,6 @@
     }
   });
 
-  $('.owl-client').owlCarousel({
-    animateOut: 'fadeOut',
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: false,
-    smartSpeed: 1000,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      1000: {
-        items: 2,
-      }
-    }
-  });
 
   //smootscroll
   $(function () {
@@ -72,22 +55,23 @@
     });
   });
 
-
 })(jQuery);
 
+
+
 //scrollReveal
-ScrollReveal().reveal("#feature");
-ScrollReveal().reveal(".feature-thumb");
+ScrollReveal().reveal("#services");
+ScrollReveal().reveal(".services-thumb");
 ScrollReveal().reveal("#about");
-ScrollReveal().reveal("#team");
+ScrollReveal().reveal("#skills");
 ScrollReveal().reveal(".skill-flex > div");
-ScrollReveal().reveal("#courses");
-ScrollReveal().reveal("#testimonial");
+ScrollReveal().reveal("#portfolio");
+//ScrollReveal().reveal("#plans");
 ScrollReveal().reveal("#contact");
 ScrollReveal().reveal("#footer");
 
 //navbar  overlay
-function openNav(e) {
+function openNav() {
   document.querySelector(".overlay-nav").style.width = "70%";
   document.querySelector(".back-drop").style.display = "block";
 }
@@ -95,7 +79,6 @@ function closeNav(e) {
   event.preventDefault();
   document.querySelector(".overlay-nav").style.width = "0";
   document.querySelector(".back-drop").style.display = "none";
-
 }
 
 //navbar background change on scroll and active anchor tag
@@ -117,7 +100,6 @@ window.onscroll = function () {
 
   href.forEach(link => {
     let section = document.querySelector(link.hash);
-
     if (section.offsetTop - 50 <= scrollPosition && section.offsetTop + section.offsetHeight - 50 > scrollPosition) {
       link.classList.add("active");
     } else {
@@ -127,3 +109,51 @@ window.onscroll = function () {
   });
 
 }
+
+//submission
+var form = document.getElementById("contact-form");
+var button = document.getElementById("submit-button");
+var statusMessage = document.getElementById("my-form-status");
+
+
+function success() {
+  form.reset();
+  button.style.display = "none";
+  status.textContent = "Message Sent, Thanks";
+}
+
+function error(e) {
+  button.value = "Retry"
+  statusMessage.textContent = "Oops! There was a Problem Sending Your Message"
+}
+
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+
+
+  xhr.addEventListener("progress", function (e) {
+    if (e.lengthComputable) {
+      button.value = `${(e.loaded / e.total) * 100}%`
+    } else {
+      button.value = "sending...";
+    }
+  })
+  xhr.addEventListener("load", success)
+  xhr.addEventListener("error", error)
+  xhr.addEventListener("timeout", function () {
+    button.value = "Retry"
+    statusMessage.textContent = "Oops! Time out check your networks!!!"
+  })
+
+  xhr.open(method, url);
+  xhr.setRequestHeader("accept", "application/json");
+  xhr.timeout = 10000;
+  xhr.send(data)
+}
+
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  var data = new FormData(form);
+  ajax(form.method, form.action, data, success, error)
+})
