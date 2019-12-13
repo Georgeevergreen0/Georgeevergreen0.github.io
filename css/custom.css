@@ -4,51 +4,12 @@ body {
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;
   position: relative;
+  font-size: 16px;
 }
 
 /*---------------------------------------
      TYPOGRAPHY
   -----------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Muli', sans-serif;
-  font-weight: bold;
-  line-height: inherit;
-}
-
-h1 {
-  color: #252525;
-  font-size: 3em;
-  line-height: normal;
-}
-
-h2 {
-  color: black;
-  font-size: 2em;
-  padding-bottom: 10px;
-}
-
-h3 {
-  font-size: 1.5em;
-  margin-bottom: 0;
-}
-
-h3,
-h3 a {
-  color: #454545;
-}
-
-p {
-  color: black;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 24px;
-}
-
 /*---------------------------------------
      GENERAL
   -----------------------------------------*/
@@ -284,7 +245,7 @@ section#top {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 75;
   display: none;
 }
@@ -294,28 +255,33 @@ section#top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 50;
   padding: 0 20px;
   color: white;
   background-color: transparent;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .brand-name {
   color: greenyellow;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-.logo {
-  margin: 0 auto;
+.brand-name:hover {
+  color: greenyellow;
+  font-weight: 600;
+  font-size: 23px;
 }
 
 .costume-navbar-content {
@@ -323,7 +289,6 @@ section#top {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
 }
 
 .costume-navbar-content input {
@@ -359,22 +324,40 @@ section#top {
 
 .costume-navbar-content a:Hover,
 .costume-navbar-content a:active {
-  color: black;
+  color: blue;
   background-color: white;
-  border-bottom: 2px solid blue;
+  border-bottom: 1px solid blue;
 }
 
 .costume-navbar-content a.active {
-  color: black;
+  color: blue;
   background-color: white;
   border-bottom: 2px solid blue;
 }
 
 #open-tab {
-  padding: 10px;
+  width: 40px;
+  height: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
   cursor: pointer;
-  font-weight: 900;
-  font-size: 18px;
+}
+
+#open-tab div {
+  width: 90%;
+  height: 5px;
+  background-color: white;
 }
 
 @media (min-width: 1000px) {
@@ -393,16 +376,6 @@ section#top {
   -----------------------------------------*/
 #home {
   padding: 0;
-}
-
-#home h1 {
-  color: #ffffff;
-}
-
-#home h3 {
-  color: black;
-  font-weight: 300;
-  margin: 0;
 }
 
 #home #top {
@@ -489,9 +462,10 @@ section#top {
 }
 
 #about p {
-  height: 300px;
+  min-height: 300px;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
 
 .container-cube {
@@ -618,7 +592,7 @@ section#top {
 }
 
 .skills-info,
-.skills-info h3,
+.skills-info h4,
 .skills-info ul {
   width: 100%;
 }

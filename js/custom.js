@@ -119,7 +119,7 @@ var statusMessage = document.getElementById("my-form-status");
 function success() {
   form.reset();
   button.style.display = "none";
-  status.textContent = "Message Sent, Thanks";
+  statusMessage.textContent = "Message Sent, Thanks";
 }
 
 function error(e) {
@@ -129,21 +129,21 @@ function error(e) {
 
 function ajax(method, url, data, success, error) {
   var xhr = new XMLHttpRequest();
-
-
-  xhr.addEventListener("progress", function (e) {
-    if (e.lengthComputable) {
-      button.value = `${(e.loaded / e.total) * 100}%`
-    } else {
-      button.value = "sending...";
-    }
-  })
   xhr.addEventListener("load", success)
   xhr.addEventListener("error", error)
   xhr.addEventListener("timeout", function () {
     button.value = "Retry"
     statusMessage.textContent = "Oops! Time out check your networks!!!"
   })
+
+  xhr.upload.addEventListener("progress", function (e) {
+    if (e.lengthComputable) {
+      button.value = `${(e.loaded / e.total) * 100}%`
+    } else {
+      button.value = "sending...";
+    }
+  })
+  xhr.upload.addEventListener("error", error)
 
   xhr.open(method, url);
   xhr.setRequestHeader("accept", "application/json");
