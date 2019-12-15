@@ -66,7 +66,8 @@ ScrollReveal().reveal("#about");
 ScrollReveal().reveal("#skills");
 ScrollReveal().reveal(".skill-flex > div");
 ScrollReveal().reveal("#portfolio");
-//ScrollReveal().reveal("#plans");
+ScrollReveal().reveal("#plans");
+ScrollReveal().reveal(".plan-item");
 ScrollReveal().reveal("#contact");
 ScrollReveal().reveal("#footer");
 
@@ -138,9 +139,9 @@ function ajax(method, url, data, success, error) {
 
   xhr.upload.addEventListener("progress", function (e) {
     if (e.lengthComputable) {
-      button.value = `${(e.loaded / e.total) * 100}%`
+      button.value = `Sending ${(e.loaded / e.total) * 100}%`
     } else {
-      button.value = "sending...";
+      button.value = "Sending...";
     }
   })
   xhr.upload.addEventListener("error", error)
@@ -154,6 +155,8 @@ function ajax(method, url, data, success, error) {
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  button.value = "sending...";
+  statusMessage.textContent = "";
   var data = new FormData(form);
   ajax(form.method, form.action, data, success, error)
 })

@@ -5,11 +5,9 @@ body {
   overflow-x: hidden;
   position: relative;
   font-size: 16px;
+  line-height: 1.65;
 }
 
-/*---------------------------------------
-     TYPOGRAPHY
-  -----------------------------------------*/
 /*---------------------------------------
      GENERAL
   -----------------------------------------*/
@@ -432,6 +430,13 @@ section#top {
   background: #ffffff;
   border: 1px solid #f0f0f0;
   padding: 5em 3em;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.services-thumb:hover {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+          box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .services-thumb span {
@@ -448,7 +453,7 @@ section#top {
   margin-bottom: 5px;
 }
 
-#services .services-thumb h3 {
+#services .services-thumb h4 {
   margin: 10px 0;
   color: black;
 }
@@ -461,16 +466,19 @@ section#top {
   padding: 0px 0 20px 0;
 }
 
-#about p {
-  min-height: 300px;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+#about .paragraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 350px;
 }
 
 .container-cube {
   width: 100%;
-  height: 300px;
+  min-height: 340px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,14 +488,15 @@ section#top {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-perspective: 3000px;
-          perspective: 3000px;
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+  margin: 5px 0;
 }
 
 .cube {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-animation: cube 10s linear 0s infinite;
@@ -495,8 +504,8 @@ section#top {
 }
 
 .cube div {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-size: cover;
   position: absolute;
   opacity: 1.0;
@@ -504,38 +513,38 @@ section#top {
 
 .cube-top {
   background-image: url(../pictures/about-html5.jpg);
-  -webkit-transform: rotateX(90deg) translateZ(100px);
-          transform: rotateX(90deg) translateZ(100px);
+  -webkit-transform: rotateX(90deg) translateZ(75px);
+          transform: rotateX(90deg) translateZ(75px);
 }
 
 .cube-bottom {
   background-image: url(../pictures/about-mongodb.jpg);
-  -webkit-transform: rotateX(-90deg) translateZ(100px);
-          transform: rotateX(-90deg) translateZ(100px);
+  -webkit-transform: rotateX(-90deg) translateZ(75px);
+          transform: rotateX(-90deg) translateZ(75px);
 }
 
 .cube-left {
   background-image: url(../pictures/about-react.jpg);
-  -webkit-transform: rotateY(-90deg) translateZ(100px);
-          transform: rotateY(-90deg) translateZ(100px);
+  -webkit-transform: rotateY(-90deg) translateZ(75px);
+          transform: rotateY(-90deg) translateZ(75px);
 }
 
 .cube-right {
   background-image: url(../pictures/about-javascript.jpg);
-  -webkit-transform: rotateY(90deg) translateZ(100px);
-          transform: rotateY(90deg) translateZ(100px);
+  -webkit-transform: rotateY(90deg) translateZ(75px);
+          transform: rotateY(90deg) translateZ(75px);
 }
 
 .cube-back {
-  -webkit-transform: rotateY(180deg) translateZ(100px);
-          transform: rotateY(180deg) translateZ(100px);
   background-image: url(../pictures/about-css3.png);
+  -webkit-transform: rotateY(180deg) translateZ(75px);
+          transform: rotateY(180deg) translateZ(75px);
 }
 
 .cube-front {
   background-image: url(../pictures/about-node.jpg);
-  -webkit-transform: translateZ(100px);
-          transform: translateZ(100px);
+  -webkit-transform: translateZ(75px);
+          transform: translateZ(75px);
 }
 
 @-webkit-keyframes cube {
@@ -560,6 +569,41 @@ section#top {
   }
 }
 
+@media only screen and (min-width: 767px) {
+  .cube {
+    width: 200px;
+    height: 200px;
+  }
+  .cube div {
+    width: 200px;
+    height: 200px;
+  }
+  .cube-top {
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+            transform: rotateX(90deg) translateZ(100px);
+  }
+  .cube-bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+            transform: rotateX(-90deg) translateZ(100px);
+  }
+  .cube-left {
+    -webkit-transform: rotateY(-90deg) translateZ(100px);
+            transform: rotateY(-90deg) translateZ(100px);
+  }
+  .cube-right {
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+            transform: rotateY(90deg) translateZ(100px);
+  }
+  .cube-back {
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+            transform: rotateY(180deg) translateZ(100px);
+  }
+  .cube-front {
+    -webkit-transform: translateZ(100px);
+            transform: translateZ(100px);
+  }
+}
+
 /*---------------------------------------
       SKILLS
   -----------------------------------------*/
@@ -575,16 +619,26 @@ section#top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .skill-flex > div {
   background-color: #ffffff;
-  margin: 1%;
+  border: 1px solid #ddd;
+  width: 99%;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.skill-flex > div:hover {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+          box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .skill-flex img {
@@ -599,27 +653,22 @@ section#top {
 
 .skills-info ul {
   color: black;
+  padding-left: 20px;
 }
 
 .skills-info {
   padding: 5px 5px;
 }
 
-@media only screen and (min-width: 458px) {
-  .skill-flex > div {
-    width: 98%;
-  }
-}
-
 @media only screen and (min-width: 767px) {
   .skill-flex > div {
-    width: 48%;
+    width: 49%;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .skill-flex > div {
-    width: 23%;
+    width: 24%;
   }
 }
 
@@ -633,7 +682,15 @@ section#top {
 #portfolio .item {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
   overflow: hidden;
+}
+
+#portfolio .item:hover {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+          box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 #portfolio .owl-theme .owl-nav {
@@ -684,12 +741,71 @@ section#top {
   -----------------------------------------*/
 #plans {
   background: #f9f9f9;
-  padding: 40px 15px;
 }
 
 #plans .section-title {
   text-align: center;
   padding-bottom: 20px;
+}
+
+.plan-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.plan-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+  margin: 10px 0;
+  width: 98%;
+}
+
+.plan-item:hover {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+          box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.plan-item > div {
+  border: 1px solid #ddd;
+}
+
+.plan-item i {
+  color: blue;
+}
+
+.plan-item .dark {
+  background-color: #ddd;
+  padding: 10px 5px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.plan-item .light {
+  background-color: #f9f9f9;
+  padding: 10px 5px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.plan-item .normal {
+  padding: 10px 5px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 767px) {
+  .plan-item {
+    width: 32%;
+  }
 }
 
 /*---------------------------------------
@@ -716,8 +832,7 @@ section#top {
   padding: 1em 0;
 }
 
-#contact-form .col-md-12,
-#contact-form .col-md-4 {
+#contact-form .col-md-12 {
   padding-left: 0;
 }
 
@@ -754,7 +869,7 @@ section#top {
   -----------------------------------------*/
 footer {
   background: #252020;
-  padding: 120px 0;
+  padding: 50px 0;
 }
 
 footer .section-title {
@@ -856,23 +971,12 @@ footer .footer-icon img {
 }
 
 @media only screen and (max-width: 767px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  h1,
-  h2,
-  h3 {
-    line-height: normal;
-  }
   .footer-info {
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 580px) {
-  h2 {
-    font-size: 1.8em;
-  }
   .contact-image {
     margin-top: 0;
   }
