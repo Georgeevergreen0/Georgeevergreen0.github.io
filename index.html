@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
-     <title>Evergreen George Ekene</title>
+     <title>Evergreen George Ekene - Portfolio Site</title>
      <meta charset="UTF-8">
+     <meta name="robots" content="index nofollow">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="author" content=" Evergreen George Ekene">
-     <meta name="robots" content="index">
-     <meta name="description" content="Personal Portfolio Site">
+     <meta name="description"
+          content="MERN Stack Developer, NodeJs Developer, React Developer, front-End Developer, Back-End Developer, Full-Stack Developer">
      <meta name="keywords" content="web Developer, Nodejs Developer, React Developer, Full-Stack Developer">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="shortcut icon" href="./pictures/evergreen-icon.png" type="image/x-icon">
 
-     <script type="text/javascript" src="./js/scrollreveal.min.js"></script>
+     <!-- Scrollreveal4 CDN-->
+     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
      <script>
           ScrollReveal({
                delay: 300,
@@ -26,13 +29,22 @@
           })
      </script>
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     <!-- MAIN CSS -->
+     <!-- Bootstrap3 CDN-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+     <!-- fontawesome5 CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+     <!-- owlcarousel CDN-->
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+     <!-- custom CSS -->
+
+     <!-- custom CSS-->
      <link rel="stylesheet" href="css/custom.css">
-     <link rel="shortcut icon" href="./pictures/evergreen-icon.png" type="image/x-icon">
 
 </head>
 
@@ -41,23 +53,18 @@
      <!-- PRE LOADER -->
      <section class="preloader">
           <div class="spinner">
-
                <span class="spinner-rotate"></span>
-
           </div>
      </section>
-
 
      <!--Navigation -->
      <div class="costume-navbar">
           <a href="#home" class="brand-name">Evergreen</a>
           <div class="costume-navbar-content">
                <input type="search" placeholder=" Search">
-               <a href="#services"><i class="fas fa-podcast"></i> Services</a>
                <a href="#about"><i class="fas fa-male"></i> About</a>
                <a href="#skills"><i class="fas fa-users"></i> Skills</a>
                <a href="#portfolio"><i class="fas fa-award"></i> Portfolio</a>
-               <a href="#plans"><i class="fas fa-briefcase"></i> Pricing</a>
                <a href="#contact"><i class="fas fa-address-book"></i> Contact</a>
           </div>
           <div id="open-tab" onclick="openNav()">
@@ -72,11 +79,9 @@
      <div id="myNav" class="overlay-nav">
           <span class="closebtn" onclick="closeNav(event)"> &times;</span>
           <div class="overlay-content">
-               <a href="#services" onclick="closeNav(event)">SERVICES</a>
                <a href="#about" onclick="closeNav(event)">ABOUT</a>
                <a href="#skills" onclick="closeNav(event)">SKILLS</a>
                <a href="#portfolio" onclick="closeNav(event)">PORTFOLIO</a>
-               <a href="#plans" onclick="closeNav(event)">PRICING</a>
                <a href="#contact" onclick="closeNav(event)">CONTACT</a>
           </div>
      </div>
@@ -93,8 +98,12 @@
           <div class="owl-carousel owl-theme home-slider">
                <div class="item item-first">
                     <div class="caption">
-                         <h1>MERN <br> STACK <br> DEVELOPER</h1>
-                         <div>
+                         <div class="caption-header">I</div>
+                         <div class="caption-header">AM</div>
+                         <div class="caption-header">GEORGE</div>
+                         <div class="caption-header"> EVERGREEN</div>
+
+                         <div class="caption-link">
                               <a href="#contact" class="section-btn btn btn-default smoothScroll">Get In
                                    Touch</a>
                          </div>
@@ -103,8 +112,10 @@
 
                <div class="item item-second">
                     <div class="caption">
-                         <h1>AWS<br> CERTIFIED<br> CLOUD<br> PRACTITIONER</h1>
-                         <div>
+                         <div class="caption-header">MERN </div>
+                         <div class="caption-header">STACK </div>
+                         <div class="caption-header">DEVELOPER</div>
+                         <div class="caption-link">
                               <a href="#portfolio" class="section-btn btn btn-default smoothScroll">View
                                    Previous Works</a>
                          </div>
@@ -112,60 +123,15 @@
                </div>
                <div class="item item-third">
                     <div class="caption">
-                         <h1>I<br> AM<br> GEORGE<br> EVERGREEN</h1>
-                         <div>
+                         <div class="caption-header">AWS</div>
+                         <div class="caption-header">CERTIFIED</div>
+                         <div class="caption-header">CLOUD</div>
+                         <div class="caption-header">PRACTITIONER</div>
+                         <div class="caption-link">
                               <a href="#footer" class="section-btn btn btn-default smoothScroll">
                                    Find Me Online</a>
                          </div>
                     </div>
-               </div>
-          </div>
-     </section>
-
-
-     <!-- services -->
-     <section id="services">
-          <h2 style="text-align:center">Services</h2>
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="services-thumb">
-                              <span>01</span>
-                              <h4>Web Design</h4>
-                              <p>Simple light-weight web design mockups, illustration etc
-                                   that is user-friendly, mobile-optimised, easy to use, responsive,
-                                   printer and
-                                   screen friendly. That will convert your visitor into costumer.
-                              </p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="services-thumb">
-                              <span>02</span>
-                              <h4>Web Development</h4>
-                              <p>Web application and business software powered by JavaScript, Nodejs,
-                                   React, Express, MongoDB, AWS Dynamodb, Serverless back-end,
-                                   AWS EC2 etc and other frameworks that is highly secure and scalable.
-                              </p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="services-thumb">
-                              <span>03</span>
-                              <h4>Micro Services</h4>
-                              <p>Hoisting, testing website for vunrabilities, ensure SEO requirement are
-                                   meet.
-                                   Social-media and payment gateway integration, database back-up, Google
-                                   map,
-                                   email-newsletter,
-                                   Membership system etc.
-                              </p>
-                         </div>
-                    </div>
-
                </div>
           </div>
      </section>
@@ -175,7 +141,7 @@
           <div class="container">
                <h2>About Me</h2>
                <div class="row">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="about-grid">
                          <div class="container-cube">
                               <div class="cube">
                                    <div class="cube-top"> </div>
@@ -186,27 +152,27 @@
                                    <div class="cube-back"></div>
                               </div>
                          </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 paragraph">
-                         <p> Hi, am George. I am web developer with 2+ year’s hands on experience in
-                              front-end and back-end web application development, proficient with various web
-                              development frameworks and library. Am a passionate and enthusiastic individual
-                              with
-                              excellent relationship building and communication skills, I love to design and
-                              create
-                              things.
-                              I am comfortable developing on front-end
-                              or back-end. I primary use Nodejs and specialize in MERN stack (MongoDB,
-                              Express, React
-                              and Nodejs) but picking up a new framework is not a problem. I have hands on
-                              experience developer in cloud (AWS, Google Cloud and Firebase etc), I have vast
-                              knowledge of
-                              HTML5, CSS3, JavaScript (ES5 and beyond) and various modern frameworks and
-                              libraries such
-                              as Bootstrap, React, Gatsby, Next etc. I also have experience in hosting and deploying
-                              to cloud.
-                              Open to full-time or remote role.
-                         </p>
+                         <div class="about-content">
+                              <p><strong>Hi, am George.</strong>
+                                   I am web developer with 2+ year’s hands on experience in
+                                   front-end and back-end web application development, proficient with various web
+                                   development frameworks and library. <br>
+                                   Am a passionate and enthusiastic individual
+                                   with excellent relationship building and communication skills, I love to design and
+                                   create things. <br />
+                                   I am comfortable developing on front-end
+                                   or back-end. I primary use Nodejs and specialize in MERN stack (MongoDB,
+                                   Express, React and Nodejs) but picking up a new framework is not a problem. I have
+                                   hands
+                                   on experience developer in cloud (AWS, Google Cloud and Firebase etc), I have vast
+                                   knowledge of HTML5, CSS3, JavaScript (ES5 and beyond) and various modern frameworks
+                                   and
+                                   libraries such as Bootstrap, React, Gatsby, Next etc. I also have experience in
+                                   developing
+                                   and deploying to cloud. <br />
+                                   Open to full-time or remote role.
+                              </p>
+                         </div>
                     </div>
 
                </div>
@@ -221,7 +187,7 @@
                </div>
                <div class="skill-flex">
                     <div>
-                         <img src="./pictures/web-design.jpg" class="img-responsive" alt="">
+                         <img src="./pictures/web-design.jpg" class="img-responsive" alt="Image of responsive design">
                          <div class="skills-info">
                               <h4>FRONT-END</h4>
                               <ul>
@@ -245,7 +211,7 @@
                     </div>
 
                     <div>
-                         <img src="./pictures/javascript.jpg" class="img-responsive" alt="">
+                         <img src="./pictures/javascript.jpg" class="img-responsive" alt="Image of javaScript code">
                          <div class="skills-info">
                               <h4>BACK-END</h4>
                               <ul>
@@ -269,7 +235,7 @@
 
 
                     <div>
-                         <img src="./pictures/creative.jpg" class="img-responsive" alt="">
+                         <img src="./pictures/creative.jpg" class="img-responsive" alt="Create image">
                          <div class="skills-info">
                               <h4>OTHER-SKILLS</h4>
                               <ul>
@@ -288,7 +254,7 @@
                     </div>
 
                     <div>
-                         <img src="./pictures/coding.jpg" class="img-responsive" alt="">
+                         <img src="./pictures/coding.jpg" class="img-responsive" alt="Screen image of code">
                          <div class="skills-info">
                               <h4>SOFT SKILLS</h4>
                               <ul>
@@ -296,6 +262,7 @@
                                    <li>People skills</li>
                                    <li>Listening Skills</li>
                                    <li>System thinking</li>
+                                   <li>Creative thinking</li>
                                    <li>Speaking skills</li>
                                    <li>writting skills</li>
                                    <li>Communication skills</li>
@@ -397,81 +364,6 @@
                </div>
      </section>
 
-     <!-- Plans -->
-     <section id="plans">
-          <div class="container">
-               <div class="section-title">
-                    <h2>Pricing <small>Basic and Standard</small></h2>
-               </div>
-               <div class="plan-items">
-                    <div class="plan-item">
-                         <div>
-                              <h3 class="dark">Basic</h3>
-                              <div class="tst-rating normal">
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                              </div>
-                         </div>
-                         <div>
-                              <div class="light">Research</div>
-                              <div class="normal"><i class="fas fa-check"></i></div>
-                         </div>
-                         <div>
-                              <div class="light">Revisions</div>
-                              <div class="normal">Unlimited</div>
-                         </div>
-                    </div>
-
-                    <div class="plan-item">
-                         <div>
-                              <h3 class="dark">Standard</h3>
-                              <div class="tst-rating normal">
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                              </div>
-                         </div>
-                         <div>
-                              <div class="light">Research</div>
-                              <div class="normal"><i class="fas fa-check"></i></div>
-                         </div>
-                         <div>
-                              <div class="light">Revisions</div>
-                              <div class="normal">Unlimited</div>
-                         </div>
-
-                    </div>
-
-                    <div class="plan-item">
-                         <div>
-                              <h3 class="dark">Premium</h3>
-                              <div class="tst-rating normal">
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                              </div>
-                         </div>
-                         <div>
-                              <div class="light">Research</div>
-                              <div class="normal"><i class="fas fa-check"></i></div>
-                         </div>
-                         <div>
-                              <div class="light">Revisions</div>
-                              <div class="normal">Unlimited</div>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </section>
-
-
      <!-- CONTACT -->
      <section id="contact">
           <div class="container">
@@ -565,11 +457,10 @@
                               <div class="footer_menu">
                                    <h2>Quick Links</h2>
                                    <ul>
-                                        <li><a href="#contact">Contact</a></li>
-                                        <li><a href="#services">Services</a></li>
-                                        <li><a href="#portfolio">Portfolio</a></li>
-                                        <li><a href="#plans">Pricing</a></li>
+                                        <li><a href="#about">About</a></li>
                                         <li><a href="#skills">Skills</a></li>
+                                        <li><a href="#portfolio">Portfolio</a></li>
+                                        <li><a href="#contact">Contact</a></li>
                                    </ul>
                               </div>
                          </div>
@@ -595,9 +486,8 @@
 
 
      <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
 

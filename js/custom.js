@@ -1,7 +1,20 @@
+//navbar background change on scroll and active anchor tag
+const navSideBar = document.getElementsByClassName("costume-navbar");
+const href = document.querySelectorAll(".costume-navbar-content a");
+const scrollPosition = window.pageYOffset || document.body.scrollTop || window.scrollY;
+const height = window.innerHeight || document.documentElement.clientHeight;
+
+//submission
+var form = document.getElementById("contact-form");
+var button = document.getElementById("submit-button");
+var statusMessage = document.getElementById("my-form-status");
+
+
+
+
 (function ($) {
 
   "use strict";
-
   //PRE LOADER
   $(window).load(function () {
     $('.preloader').fadeOut(1000); // set duration in brackets
@@ -26,12 +39,7 @@
     autoplay: true,
     autoplayTimeout: 2000,
     smartSpeed: 1000,
-    dots: false,
-    nav: true,
-    navText: [
-      '<i class="fa fa-angle-left"></i>',
-      '<i class="fa fa-angle-right"></i>'
-    ],
+    dots: true,
     responsiveClass: true,
     responsive: {
       0: {
@@ -55,108 +63,103 @@
     });
   });
 
+  //scrollReveal
+  ScrollReveal().reveal("#about");
+  ScrollReveal().reveal("#skills");
+  ScrollReveal().reveal(".skill-flex>div");
+  ScrollReveal().reveal("#portfolio");
+  ScrollReveal().reveal("#contact");
+  ScrollReveal().reveal("#footer");
+
+
+  window.onscroll = function () {
+    const scrollPosition = window.pageYOffset || document.body.scrollTop || window.scrollY;
+    const height = window.innerHeight || document.documentElement.clientHeight;
+    if (scrollPosition > (height * 0.3)) {
+      navSideBar[0].style.backgroundColor = "blue";
+
+    } else {
+      navSideBar[0].style.backgroundColor = "transparent";
+    }
+    href.forEach(link => {
+      let section = document.querySelector(link.hash);
+      if (section.offsetTop - 50 <= scrollPosition && section.offsetTop + section.offsetHeight - 50 > scrollPosition) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+
+      }
+    });
+
+  }
+
+
+  function success() {
+    form.reset();
+    button.style.display = "none";
+    statusMessage.textContent = "Message Sent, Thanks";
+  }
+
+  function error(e) {
+    button.value = "Retry"
+    statusMessage.textContent = "Oops! There was a Problem Sending Your Message"
+  }
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", success)
+    xhr.addEventListener("error", error)
+    xhr.addEventListener("timeout", function () {
+      button.value = "Retry"
+      statusMessage.textContent = "Oops! Time out check your networks!!!"
+    })
+
+    xhr.upload.addEventListener("progress", function (e) {
+      if (e.lengthComputable) {
+        button.value = `Sending ${(e.loaded / e.total) * 100}%`
+      } else {
+        button.value = "Sending...";
+      }
+    })
+    xhr.upload.addEventListener("error", error)
+
+    xhr.open(method, url);
+    xhr.setRequestHeader("accept", "application/json");
+    xhr.timeout = 10000;
+    xhr.send(data)
+  }
+
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    button.value = "sending...";
+    statusMessage.textContent = "";
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error)
+  })
+
+
+
 })(jQuery);
 
-
-
-//scrollReveal
-ScrollReveal().reveal("#services");
-ScrollReveal().reveal(".services-thumb");
-ScrollReveal().reveal("#about");
-ScrollReveal().reveal("#skills");
-ScrollReveal().reveal(".skill-flex > div");
-ScrollReveal().reveal("#portfolio");
-ScrollReveal().reveal("#plans");
-ScrollReveal().reveal(".plan-item");
-ScrollReveal().reveal("#contact");
-ScrollReveal().reveal("#footer");
 
 //navbar  overlay
 function openNav() {
   document.querySelector(".overlay-nav").style.width = "70%";
   document.querySelector(".back-drop").style.display = "block";
 }
+
 function closeNav(e) {
   event.preventDefault();
   document.querySelector(".overlay-nav").style.width = "0";
   document.querySelector(".back-drop").style.display = "none";
 }
 
-//navbar background change on scroll and active anchor tag
-const navSideBar = document.getElementsByClassName("costume-navbar");
-const href = document.querySelectorAll(".costume-navbar-content a");
-
-
-
-window.onscroll = function () {
-  const scrollPosition = window.pageYOffset || document.body.scrollTop || window.scrollY;
-  const height = window.innerHeight || document.documentElement.clientHeight;
-
+!function () {
   if (scrollPosition > (height * 0.3)) {
     navSideBar[0].style.backgroundColor = "blue";
 
   } else {
     navSideBar[0].style.backgroundColor = "transparent";
   }
-
-  href.forEach(link => {
-    let section = document.querySelector(link.hash);
-    if (section.offsetTop - 50 <= scrollPosition && section.offsetTop + section.offsetHeight - 50 > scrollPosition) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-
-    }
-  });
-
-}
-
-//submission
-var form = document.getElementById("contact-form");
-var button = document.getElementById("submit-button");
-var statusMessage = document.getElementById("my-form-status");
-
-
-function success() {
-  form.reset();
-  button.style.display = "none";
-  statusMessage.textContent = "Message Sent, Thanks";
-}
-
-function error(e) {
-  button.value = "Retry"
-  statusMessage.textContent = "Oops! There was a Problem Sending Your Message"
-}
-
-function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", success)
-  xhr.addEventListener("error", error)
-  xhr.addEventListener("timeout", function () {
-    button.value = "Retry"
-    statusMessage.textContent = "Oops! Time out check your networks!!!"
-  })
-
-  xhr.upload.addEventListener("progress", function (e) {
-    if (e.lengthComputable) {
-      button.value = `Sending ${(e.loaded / e.total) * 100}%`
-    } else {
-      button.value = "Sending...";
-    }
-  })
-  xhr.upload.addEventListener("error", error)
-
-  xhr.open(method, url);
-  xhr.setRequestHeader("accept", "application/json");
-  xhr.timeout = 10000;
-  xhr.send(data)
-}
-
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  button.value = "sending...";
-  statusMessage.textContent = "";
-  var data = new FormData(form);
-  ajax(form.method, form.action, data, success, error)
-})
+}();
