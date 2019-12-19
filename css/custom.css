@@ -205,11 +205,12 @@ section#top {
   text-align: center;
   -webkit-box-shadow: 0 0 2px #ccc;
           box-shadow: 0 0 2px #ccc;
+  font-family: "Pacifico", cursive;
 }
 
 .overlay-content a:hover,
 .overlay-content a:active {
-  font-size: 25px;
+  font-size: 23px;
   background-color: blue;
   color: white;
 }
@@ -276,13 +277,13 @@ section#top {
 .brand-name {
   color: greenyellow;
   font-weight: 600;
+  letter-spacing: 7px;
+  font-family: "Pacifico", cursive;
   font-size: 22px;
 }
 
 .brand-name:hover {
   color: greenyellow;
-  font-weight: 600;
-  font-size: 23px;
 }
 
 .costume-navbar-content {
@@ -422,6 +423,7 @@ section#top {
 
 .home-slider .caption .caption-header {
   font-size: 30px;
+  font-family: "Pacifico", cursive;
 }
 
 .home-slider .caption .caption-link {
@@ -466,6 +468,7 @@ section#top {
 
 #about .about-content p {
   padding: 20px;
+  text-align: center;
 }
 
 .container-cube {
