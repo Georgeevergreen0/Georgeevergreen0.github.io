@@ -139,19 +139,6 @@ var statusMessage = document.getElementById("my-form-status");
     ajax(form.method, form.action, data, success, error)
   })
 
-  window.addEventListener("beforeinstallprompt", (e) => {
-    deferredPrompt = e;
-    deferredPrompt.prompt()
-    deferredPrompt.userChoice.then((result) => {
-      if (result.outcome === "accepted") {
-        console.log("yes i did it")
-      } else {
-        console.log("oops no way")
-      }
-    })
-  })
-
-
 })(jQuery);
 
 
@@ -175,3 +162,27 @@ function closeNav(e) {
     navSideBar[0].style.backgroundColor = "transparent";
   }
 }();
+
+// PWA
+
+if ("serviceWorker" in navigator) {
+  console.log("will the service worker register")
+  navigator.serviceWorker.register("/service-worker.js")
+    .then((reg) => {
+      console.log(reg);
+    }).catch((err) => {
+      console.log(err)
+    })
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  deferredPrompt = e;
+  deferredPrompt.prompt()
+  deferredPrompt.userChoice.then((result) => {
+    if (result.outcome === "accepted") {
+      console.log("yes i did it")
+    } else {
+      console.log("oops no way")
+    }
+  })
+})
