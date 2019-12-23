@@ -3,6 +3,7 @@ const navSideBar = document.getElementsByClassName("costume-navbar");
 const href = document.querySelectorAll(".costume-navbar-content a");
 const scrollPosition = window.pageYOffset || document.body.scrollTop || window.scrollY;
 const height = window.innerHeight || document.documentElement.clientHeight;
+let deferredPrompt;
 
 //submission
 var form = document.getElementById("contact-form");
@@ -138,6 +139,17 @@ var statusMessage = document.getElementById("my-form-status");
     ajax(form.method, form.action, data, success, error)
   })
 
+  window.addEventListener("beforeinstallprompt", (e) => {
+    deferredPrompt = e;
+    deferredPrompt.prompt()
+    deferredPrompt.userChoice.then((result) => {
+      if (result.outcome === "accepted") {
+        console.log("yes i did it")
+      } else {
+        console.log("oops no way")
+      }
+    })
+  })
 
 
 })(jQuery);
