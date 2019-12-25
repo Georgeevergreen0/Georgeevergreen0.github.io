@@ -2,31 +2,40 @@
 <html lang="en">
 
 <head>
-     <title>Full Stack Developer Portfolio | React, Nextjs, Gatsby and More</title>
+     <title>Full Stack Developer Portfolio | React, Nextjs, Gatsby, PWA and More</title>
      <meta charset="UTF-8">
      <meta name="robots" content="index, nofollow">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="author" content=" Evergreen George Ekene">
      <meta name="description"
-          content="Full-stack developer specialize in React,Gatsby,Nextjs, MongoDB, MySQL and NodeJS. I provide services such as web application development, API integration and development, Cloud development and more">
+          content="Full-stack developer specialize in React, Gatsby, Nextjs, PWA, MongoDB, MySQL and NodeJS. I provide services such as web application development, API integration and development, Cloud development and more">
      <meta name="keywords" content="web Developer, Nodejs Developer, React Developer, Full-Stack Developer">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
+     <!-- iOS meta tag -->
      <meta name="theme-color" content="#000000" />
-     <link rel="apple-touch-icon" href="./pictures/evergreen-icon.png" />
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <meta name="apple-mobile-web-app-title" content="WebDev">
+     <link rel="apple-touch-icon" href="./pictures/evergreen-small.png" />
+
+
+     <!-- manifest -->
      <link rel="manifest" href="./manifest.json">
 
 
-     <meta property="og:title" content="Full Stack Developer Portfolio | React, Nextjs, Gatsby and More">
+     <!-- Open Graph meta tag -->
+     <meta property="og:title" content="Full Stack Developer Portfolio | React, Nextjs, Gatsby, PWA and More">
      <meta property="og:type" content="website">
      <meta property="og:description"
-          content="Full-stack developer specialize in React,Gatsby,Nextjs, MongoDB, MySQL and NodeJS. I provide services such as web application development, API integration and development, Cloud development and more">
+          content="Full-stack developer specialize in React, Gatsby, Nextjs, PWA, MongoDB, MySQL and NodeJS. I provide services such as web application development, API integration and development, Cloud development and more">
      <meta property="og:url" content="https://www.georgeevergreen.com">
      <meta property="og:site_name" content="georgeevergreen.com">
      <meta property="og:image" content="/pictures/javascript.jpg">
 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap">
-     <link rel="shortcut icon" href="./pictures/evergreen-icon.png" type="image/x-icon">
+     <link rel="icon" href="./pictures/evergreen-small.png" type="image/png">
      <link rel="canonical" href="https://www.georgeevergreen.com">
 
      <!-- Scrollreveal4 CDN-->
@@ -66,7 +75,13 @@
 
 <body id="home">
 
-     <!-- PRE LOADER -->
+     <!-- PWA pop up -->
+     <div class="pwa">
+          <div class="pwa-add"><img src="./pictures/evergreen.png" alt="image of evergreen"> Add Home Screen to </div>
+          <div class="pwa-remove"> &times;</div>
+     </div>
+
+     <!-- PRE LOADER-->
      <section class="preloader">
           <div class="spinner">
                <span class="spinner-rotate"></span>

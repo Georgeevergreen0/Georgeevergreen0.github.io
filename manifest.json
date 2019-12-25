@@ -1,19 +1,19 @@
 {
     "name": "Full Stack Web Developer",
-    "short_name": "Web Dev",
+    "short_name": "WebDev",
     "icons": [{
-            "src": "./pictures/evergreen-icon.png",
+            "src": "./pictures/evergreen-small.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "./pictures/evergreen-icon.png",
+            "src": "./pictures/evergreen-big.png",
             "type": "image/png",
             "sizes": "512x512"
         }
     ],
     "start_url": "/",
-    "display": "standalone",
+    "display": "fullscreen",
     "theme_color": "#000000",
     "background_color": "#ffffff"
 }

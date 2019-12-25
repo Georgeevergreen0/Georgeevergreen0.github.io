@@ -6,9 +6,14 @@ const height = window.innerHeight || document.documentElement.clientHeight;
 let deferredPrompt;
 
 //submission
-var form = document.getElementById("contact-form");
-var button = document.getElementById("submit-button");
-var statusMessage = document.getElementById("my-form-status");
+let form = document.getElementById("contact-form");
+let button = document.getElementById("submit-button");
+let statusMessage = document.getElementById("my-form-status");
+
+//PWA add to home screen
+let pwa = document.querySelector(".pwa");
+let pwaAdd = document.querySelector(".pwa-add");
+let pwaRemove = document.querySelector(".pwa-remove");
 
 
 
@@ -139,6 +144,45 @@ var statusMessage = document.getElementById("my-form-status");
     ajax(form.method, form.action, data, success, error)
   })
 
+
+  // PWA
+  if ("serviceWorker" in navigator) {
+    console.log("will the service worker register")
+    navigator.serviceWorker.register("/service-worker.js")
+      .then((reg) => {
+        console.log("Registered service worker")
+      }).catch((err) => {
+        console.log(" Error occured while registering service worker")
+      })
+  }
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault()
+    deferredPrompt = e;
+    pwa.style.display = "flex";
+
+    pwaAdd.addEventListener("click", () => {
+      deferredPrompt.prompt()
+      pwa.style.display = "none";
+
+      deferredPrompt.userChoice.then((result) => {
+        if (result.outcome === "accepted") {
+          deferredPrompt = null;
+        } else {
+          deferredPrompt = null;
+        }
+      })
+    })
+
+    pwaRemove.addEventListener("click", () => {
+      pwa.style.display = "none";
+    })
+
+
+  })
+
+
+
 })(jQuery);
 
 
@@ -162,27 +206,3 @@ function closeNav(e) {
     navSideBar[0].style.backgroundColor = "transparent";
   }
 }();
-
-// PWA
-
-if ("serviceWorker" in navigator) {
-  console.log("will the service worker register")
-  navigator.serviceWorker.register("/service-worker.js")
-    .then((reg) => {
-      console.log(reg);
-    }).catch((err) => {
-      console.log(err)
-    })
-}
-
-window.addEventListener("beforeinstallprompt", (e) => {
-  deferredPrompt = e;
-  deferredPrompt.prompt()
-  deferredPrompt.userChoice.then((result) => {
-    if (result.outcome === "accepted") {
-      console.log("yes i did it")
-    } else {
-      console.log("oops no way")
-    }
-  })
-})
