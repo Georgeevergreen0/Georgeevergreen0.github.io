@@ -20,7 +20,7 @@ const FILE_TO_CACHE = [
     "/pictures/about-node.jpg",
     "/pictures/about-css3.png",
     "/pictures/about-javascript.jpg",
-    "http://127.0.0.1:3000/pictures/evergreen-small.png",
+    "/pictures/evergreen-small.png",
     "/css/custom.css",
     "/js/custom.js",
     "/js/smoothscroll.js",
