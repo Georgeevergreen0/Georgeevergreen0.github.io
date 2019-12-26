@@ -1,29 +1,32 @@
 const FILE_TO_CACHE = [
     "/",
     "/manifest.json",
-    "/pictures/portfolio-school.png",
-    "/pictures/portfolio-gym.png",
-    "/pictures/portfolio-burger.png",
-    "/pictures/landing.jpg",
-    "/pictures/landing-2.jpg",
-    "/pictures/portfolio-evergreen.png",
-    "/pictures/landing-3.jpg",
-    "/pictures/web-design.jpg",
-    "/pictures/creative.jpg",
+    "/pictures/landing.webp",
+    "/pictures/landing-2.webp",
+    "/pictures/landing-3.webp",
+    "/pictures/portfolio-school.webp",
+    "/pictures/portfolio-gym.webp",
+    "/pictures/portfolio-burger.webp",
+    "/pictures/portfolio-evergreen.webp",
+    "/pictures/about-mongodb.webp",
+    "/pictures/about-html5.webp",
+    "/pictures/about-react.webp",
+    "/pictures/about-node.webp",
+    "/pictures/about-css3.webp",
+    "/pictures/about-javascript.webp",
+    "/pictures/web-design.webp",
+    "/pictures/creative.webp",
+    "/pictures/coding.webp",
+    "/pictures/javascript.webp",
     "/pictures/img-01.png",
-    "/pictures/coding.jpg",
     "/pictures/evergreen.png",
-    "/pictures/javascript.jpg",
-    "/pictures/about-mongodb.jpg",
-    "/pictures/about-html5.jpg",
-    "/pictures/about-react.jpg",
-    "/pictures/about-node.jpg",
-    "/pictures/about-css3.png",
-    "/pictures/about-javascript.jpg",
     "/pictures/evergreen-small.png",
+    "/pictures/evergreen-big.png",
     "/css/custom.css",
     "/js/custom.js",
     "/js/smoothscroll.js",
+    "https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofINeaBTMnFcQ.woff2",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/webfonts/fa-brands-400.woff2",
     "https://fonts.googleapis.com/css?family=Muli:300,700|Nunito",
     "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css",
@@ -33,7 +36,7 @@ const FILE_TO_CACHE = [
     "https://fonts.googleapis.com/css?family=Pacifico&display=swap",
 ]
 
-const CATCH_NAME = "catchVersion-0"
+const CATCH_NAME = "catchVersion-2"
 
 
 self.addEventListener("install", function (e) {
@@ -67,7 +70,7 @@ self.addEventListener("fetch", function (e) {
                     return response
                 }
                 return fetch(e.request).then((networkResponse) => {
-                    cache.put(e.request, networkResponse.clone());
+                    cache.put(e.request.url, networkResponse.clone());
                     return networkResponse;
                 })
             }).catch(err => {

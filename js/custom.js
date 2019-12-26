@@ -159,11 +159,13 @@ let pwaRemove = document.querySelector(".pwa-remove");
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault()
     deferredPrompt = e;
-    pwa.style.display = "flex";
+    pwa.classList.add("showing");
+    pwa.classList.remove("hide");
 
     pwaAdd.addEventListener("click", () => {
       deferredPrompt.prompt()
-      pwa.style.display = "none";
+      pwa.classList.add("hide");
+      pwa.classList.remove("showing");
 
       deferredPrompt.userChoice.then((result) => {
         if (result.outcome === "accepted") {
@@ -175,7 +177,8 @@ let pwaRemove = document.querySelector(".pwa-remove");
     })
 
     pwaRemove.addEventListener("click", () => {
-      pwa.style.display = "none";
+      pwa.classList.add("hide");
+      pwa.classList.remove("showing");
     })
 
 
