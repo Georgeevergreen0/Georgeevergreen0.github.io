@@ -36,7 +36,7 @@ const FILE_TO_CACHE = [
     "https://fonts.googleapis.com/css?family=Pacifico&display=swap",
 ]
 
-const CATCH_NAME = "catchVersion-2"
+const CATCH_NAME = "catchVersion-6"
 
 
 self.addEventListener("install", function (e) {
