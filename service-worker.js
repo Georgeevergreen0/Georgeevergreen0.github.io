@@ -36,7 +36,7 @@ const FILE_TO_CACHE = [
     "https://fonts.googleapis.com/css?family=Pacifico&display=swap",
 ]
 
-const CATCH_NAME = "catchVersion-6"
+const CATCH_NAME = "catchVersion-7"
 
 
 self.addEventListener("install", function (e) {
@@ -74,7 +74,7 @@ self.addEventListener("fetch", function (e) {
                     return networkResponse;
                 })
             }).catch(err => {
-                console.log(err)
+                console.log("Network failed with", err);
             })
         })
     )

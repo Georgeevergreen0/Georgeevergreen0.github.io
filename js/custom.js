@@ -147,7 +147,6 @@ let pwaRemove = document.querySelector(".pwa-remove");
 
   // PWA
   if ("serviceWorker" in navigator) {
-    console.log("will the service worker register")
     navigator.serviceWorker.register("/service-worker.js")
       .then((reg) => {
         console.log("Registered service worker")
