@@ -5,7 +5,7 @@ const FILE_TO_CACHE = [
     "/pictures/landing-2.webp",
     "/pictures/landing-3.webp",
     "/pictures/portfolio-school.webp",
-    "/pictures/portfolio-gym.webp",
+    "pictures/portfolio-weather.webp",
     "/pictures/portfolio-burger.webp",
     "/pictures/portfolio-evergreen.webp",
     "/pictures/about-mongodb.webp",
@@ -36,7 +36,7 @@ const FILE_TO_CACHE = [
     "https://fonts.googleapis.com/css?family=Pacifico&display=swap",
 ]
 
-const CATCH_NAME = "catchVersion-7"
+const CATCH_NAME = "catchVersion-8"
 
 
 self.addEventListener("install", function (e) {
